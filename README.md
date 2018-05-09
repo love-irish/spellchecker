@@ -1,4 +1,4 @@
-# Spellchecker
+# Spellchecker [![CodeFactor](https://www.codefactor.io/repository/github/love-irish/spellchecker/badge/master)](https://www.codefactor.io/repository/github/love-irish/spellchecker/overview/master) [![Build Status](https://travis-ci.com/love-irish/spellchecker.svg?branch=master)](https://travis-ci.com/love-irish/spellchecker)
 Short description and motivation.
 
 ## Usage
