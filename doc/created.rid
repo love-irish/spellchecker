@@ -1,9 +1,10 @@
-Tue, 08 May 2018 23:11:34 -0700
+Tue, 08 May 2018 23:58:30 -0700
 ./bin/test	Tue, 08 May 2018 22:31:31 -0700
-./Gemfile	Tue, 08 May 2018 22:38:42 -0700
+./Gemfile	Tue, 08 May 2018 23:30:42 -0700
 ./Gemfile.lock	Tue, 08 May 2018 22:39:15 -0700
+./lib/spellchecker/nlp.rb	Tue, 08 May 2018 23:30:32 -0700
 ./lib/spellchecker/version.rb	Tue, 08 May 2018 22:31:31 -0700
-./lib/spellchecker.rb	Tue, 08 May 2018 22:31:31 -0700
+./lib/spellchecker.rb	Tue, 08 May 2018 23:26:34 -0700
 ./lib/tasks/spellchecker_tasks.rake	Tue, 08 May 2018 22:31:31 -0700
 ./LICENSE	Tue, 08 May 2018 22:30:22 -0700
 ./MIT-LICENSE	Tue, 08 May 2018 22:31:31 -0700
@@ -52,8 +53,8 @@ Tue, 08 May 2018 23:11:34 -0700
 ./test/dummy/config/secrets.yml	Tue, 08 May 2018 22:31:32 -0700
 ./test/dummy/config/spring.rb	Tue, 08 May 2018 22:31:32 -0700
 ./test/dummy/config.ru	Tue, 08 May 2018 22:31:31 -0700
-./test/dummy/db/test.sqlite3	Tue, 08 May 2018 22:36:13 -0700
-./test/dummy/log/test.log	Tue, 08 May 2018 22:36:13 -0700
+./test/dummy/db/test.sqlite3	Tue, 08 May 2018 23:33:12 -0700
+./test/dummy/log/test.log	Tue, 08 May 2018 23:33:12 -0700
 ./test/dummy/package.json	Tue, 08 May 2018 22:31:32 -0700
 ./test/dummy/public/404.html	Tue, 08 May 2018 22:31:32 -0700
 ./test/dummy/public/422.html	Tue, 08 May 2018 22:31:32 -0700
@@ -62,5 +63,6 @@ Tue, 08 May 2018 23:11:34 -0700
 ./test/dummy/public/apple-touch-icon.png	Tue, 08 May 2018 22:31:32 -0700
 ./test/dummy/public/favicon.ico	Tue, 08 May 2018 22:31:32 -0700
 ./test/dummy/Rakefile	Tue, 08 May 2018 22:31:31 -0700
-./test/spellchecker_test.rb	Tue, 08 May 2018 22:31:31 -0700
+./test/spellchecker_nlp_test.rb	Tue, 08 May 2018 23:33:05 -0700
+./test/spellchecker_test.rb	Tue, 08 May 2018 23:32:15 -0700
 ./test/test_helper.rb	Tue, 08 May 2018 22:31:31 -0700
