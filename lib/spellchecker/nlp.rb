@@ -1,7 +1,7 @@
 module Spellchecker
   module NLP
     def self.process word
-      puts word
+      [word]
     end
   end
 end
