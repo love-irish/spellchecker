@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Spellchecker::VERSION
   s.authors     = ["Myk Klemme"]
   s.email       = ["mykklemme@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Spellchecker."
-  s.description = "TODO: Description of Spellchecker."
+  s.homepage    = "https://github.com/love-irish/spellchecker"
+  s.summary     = "A ruby spellchecker that works for Irish"
+  s.description = "A ruby spellchecker that works for Irish"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
