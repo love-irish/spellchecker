@@ -1,0 +1,1 @@
+var search_data = {"index":{"searchIndex":["spellchecker","readme"],"longSearchIndex":["spellchecker",""],"info":[["Spellchecker","","Spellchecker.html","",""],["README","","README_md.html","","<p>Spellchecker\n<p>Short description and motivation.\n<p>Usage\n"]]}}
