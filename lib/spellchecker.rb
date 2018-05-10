@@ -1,4 +1,3 @@
-require "spellchecker/nlp"
 require "spellchecker/word_processor"
 require "spellchecker/file_processor"
 require "pry"
