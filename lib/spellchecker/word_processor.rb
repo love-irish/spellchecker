@@ -51,12 +51,13 @@ module Spellchecker
       @word = word
       
       # a hash of all the words ranked by frequency
-      @dataset = train(File.open('./lib/datasets/sentences.txt').read.downcase.scan(/[ÀÂÉÈÊÎÔÚÛàâéèêîôùûa-z]+/))
-      @letters = ("a".."z").to_a.join
+      @dataset = train(File.open('./lib/datasets/sentences.txt').read.downcase.scan(/[áéíóúa-z]+/))
+      @letters = (("a".."z").to_a + ["á","é","í","ó","ú"]).join
     end
     
     def process word=@word
       @word=word
+      
       (known([word]) || known(edits1(word)) || known_edits2(word) || [word]).max {|a,b| @dataset[a] <=> @dataset[b] }
     end
     
