@@ -1,7 +1,6 @@
 module Spellchecker
   module NLP
     def self.process word
-      binding.pry
       [word]
     end
     
