@@ -51,7 +51,9 @@ module Spellchecker
       @word = word
       
       # a hash of all the words ranked by frequency
-      @dataset = train(File.open('./lib/datasets/sentences.txt').read.downcase.scan(/[áéíóúa-z]+/))
+      @dataset = File.open('./lib/datasets/sentences.txt') do |dataset|
+        train(dataset.read.downcase.scan(/[áéíóúa-z]+/))
+      end
       @letters = (("a".."z").to_a + ["á","é","í","ó","ú"]).join
     end
     

@@ -7,7 +7,10 @@ require "nokogiri"
 module Spellchecker::FileProcessor
   def self.run(file)
     puts "processing #{file} ..."
-    Nokogiri::XML(File.open(file))
+    
+    File.open(file) do |opened_file|
+      Nokogiri::XML(opened_file)
+    end
   end
   
   def self.compile_original_sentences(doc)
