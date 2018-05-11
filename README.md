@@ -1,8 +1,26 @@
 # Spellchecker [![CodeFactor](https://www.codefactor.io/repository/github/love-irish/spellchecker/badge/master)](https://www.codefactor.io/repository/github/love-irish/spellchecker/overview/master) [![Build Status](https://travis-ci.com/love-irish/spellchecker.svg?branch=master)](https://travis-ci.com/love-irish/spellchecker)
 Short description and motivation.
 
+## Current Limitations
+
+- [ ] Accents blow up the processor when comparing the utf-8 vs. ascii encoding. I just need to refactor this [line](https://github.com/love-irish/spellchecker/blob/master/lib/spellchecker/word_processor.rb#L39).
+- [ ] The system should address similar sounding letter combinations: `aoi`, `i`, etc.
+- [ ] This spellchecker relies on a large dataset to compare the words to. Our current dataset is small so getting access to a larger, scrubbed dataset would help improve the accuracy.
+
 ## Usage
-How to use my plugin.
+
+```ruby
+processor = Spellchecker::WordProcessor.new
+
+processor.process "diia"
+=> "dia"
+
+processor.process "domanda"
+=> "domhanda"
+
+processor.process "thacae"
+=> "thaca"
+```
 
 ## Installation
 Add this line to your application's Gemfile:
