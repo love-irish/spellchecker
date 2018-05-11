@@ -1,20 +1,20 @@
-# 
+#
 # https://blog.lojic.com/2008/09/04/how-to-write-a-spelling-corrector-in-ruby/
-# 
+#
 # def words text
 #   text.downcase.scan(/[a-z]+/)
 # end
-# 
-# def train features
+#
+# def create_word_hash features
 #   model = Hash.new(1)
 #   features.each {|f| model[f] += 1 }
 #   p model
 #   return model
 # end
-# 
-# NWORDS = train(words(File.new('./lib/datasets/holmes.txt').read))
+#
+# NWORDS = create_word_hash(words(File.new('./lib/datasets/holmes.txt').read))
 # LETTERS = ("a".."z").to_a.join
-# 
+#
 # def edits1 word
 #   n = word.length
 #   deletion = (0...n).collect {|i| word[0...i]+word[i+1..-1] }
@@ -26,18 +26,18 @@
 #   result = deletion + transposition + alteration + insertion
 #   result.empty? ? nil : result
 # end
-# 
+#
 # def known_edits2 word
 #   result = []
 #   edits1(word).each {|e1| edits1(e1).each {|e2| result << e2 if NWORDS.has_key?(e2) }}
 #   result.empty? ? nil : result
 # end
-# 
+#
 # def known words
 #   result = words.find_all {|w| NWORDS.has_key?(w) }
 #   result.empty? ? nil : result
 # end
-# 
+#
 # def correct word
 #   (known([word]) or known(edits1(word)) or known_edits2(word) or
 #     [word]).max {|a,b| NWORDS[a] <=> NWORDS[b] }
@@ -49,30 +49,30 @@ module Spellchecker
     def initialize(word=nil)
       # the word we are going to process
       @word = word
-      
+
       # a hash of all the words ranked by frequency
       @dataset = File.open('./lib/datasets/sentences.txt') do |dataset|
-        train(dataset.read.downcase.scan(/[áéíóúa-z]+/))
+        create_word_hash(dataset.read.downcase.scan(/[áéíóúa-z]+/))
       end
       @letters = (("a".."z").to_a + ["á","é","í","ó","ú"]).join
     end
-    
+
     def process word=@word
       @word=word
-      
+
       (known([word]) || known(edits1(word)) || known_edits2(word) || [word]).max {|a,b| @dataset[a] <=> @dataset[b] }
     end
-    
+
     private
-    
-    def train dataset
-      model = Hash.new(1)
-      dataset.each {|f| model[f] += 1 }
-      model
+
+    def create_word_hash dataset
+      hash = Hash.new(1)
+      dataset.each {|f| hash[f] += 1 }
+      hash
     end
-    
+
     # everything below this needs to be refactored
-    
+
     def edits1 word
       n = word.length
       deletion = (0...n).collect {|i| word[0...i]+word[i+1..-1] }
