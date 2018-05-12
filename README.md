@@ -37,9 +37,11 @@ $ bundle install
 
 ## Credits
 
-- [Irish word corpus [lib/datasets/sentences.xml]](http://www.lexiconista.com/) - Huge thanks to Michal for his work on compiling this dataset.
+- [Irish word corpus](http://www.lexiconista.com/datasets/sentencebank-ga/)[lib/datasets/sentences.xml](/lib/datasets/sentences.xml) - Huge thanks to Michal for his work on compiling this dataset.
 - [Spellchecker in python](http://norvig.com/spell-correct.html) - The post that inspired me to try building this for Irish. 
 - [Spellchecker in ruby](https://blog.lojic.com/2008/09/04/how-to-write-a-spelling-corrector-in-ruby/) - Someone converted the post into ruby and I cleaned it up and am rewriting it to work with accents.
+
+Maintained by [@mklemme](https://github.com/mklemme).
 
 ## Contributing
 Contribution directions go here.
