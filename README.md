@@ -23,21 +23,23 @@ processor.process "thacae"
 ```
 
 ## Installation
+
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'spellchecker'
+gem 'spellchecker', github: "love-irish/spellchecker", branch: "master"
 ```
 
-And then execute:
+And then run this in your terminal:
 ```bash
-$ bundle
+$ bundle install
 ```
 
-Or install it yourself as:
-```bash
-$ gem install spellchecker
-```
+## Credits
+
+- [Irish word corpus [lib/datasets/sentences.xml]](http://www.lexiconista.com/) - Huge thanks to Michal for his work on compiling this dataset.
+- [Spellchecker in python](http://norvig.com/spell-correct.html) - The post that inspired me to try building this for Irish. 
+- [Spellchecker in ruby](https://blog.lojic.com/2008/09/04/how-to-write-a-spelling-corrector-in-ruby/) - Someone converted the post into ruby and I cleaned it up and am rewriting it to work with accents.
 
 ## Contributing
 Contribution directions go here.
